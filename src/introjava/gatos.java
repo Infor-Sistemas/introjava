@@ -9,7 +9,7 @@ package introjava;
  *
  * @author noite
  */
-public class gatos {
+public class gatos extends mamiferos {
 
     
     public int Miar() {

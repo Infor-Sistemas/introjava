@@ -9,7 +9,7 @@ package introjava;
  *
  * @author noite
  */
-public class mamiferos {
+public class mamiferos extends animais {
     String CorDosPelos = null;
     int ComprimentoPelos;    
             
