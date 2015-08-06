@@ -19,17 +19,24 @@ public class Introjava {
     public static void main(String[] args) {
         // TODO code application logic here
     
-    Scanner teste = new Scanner(System.in);
-    System.out.println("Informe um valor");
-    int retorno = teste.nextInt();
-    
-    while(retorno != 0 && retorno <=12){
-        System.out.println("Informe um valor");
-        retorno = teste.nextInt();
-        
-        }
-    System.out.println("Valor Informado com sucesso");
-       
+        aves objPassaro = new aves();
+             String resultado = objPassaro.Comer("mais");
+             
+             if(resultado == "mais"){
+                 System.out.print("Vou enviar mais comida");
+             }
+             
+//    Scanner teste = new Scanner(System.in);
+//    System.out.println("Informe um valor");
+//    int retorno = teste.nextInt();
+//    
+//    while(retorno != 0 && retorno <=12){
+//        System.out.println("Informe um valor");
+//        retorno = teste.nextInt();
+//        
+//        }
+//    System.out.println("Valor Informado com sucesso");
+//       
     }
     
 }

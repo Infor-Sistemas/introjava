@@ -15,14 +15,29 @@ public class animais {
     int peso;
     String corDosOlhos;
     
-    public int Comer(){
-    
-        return 1;
+    public String Comer( String mensagem){
+        System.out.println("quero comer");
+        String resultado = "mais";
+        if(mensagem != "mais"){
+            System.out.print("satisfeito");
+            resultado = "Obrigado";
+        }else{
+            System.out.println("Ainda estou com fome quero comer");
+        }
+        return mensagem;
     
     }
+//    public String Comer(){
+//        int valorComida = 10;
+//        String mensagem = "MAIS";
+//        System.out.println("Ola, estou com fome e quero comer");
+//        return mensagem;
+//    
+//    }
+
     
     public int Dormir(){
-    
+        System.out.println("bucho cheio e agora vou Giboiar");
         return 1;
     
     }
