@@ -28,6 +28,7 @@ public class Introjava {
         System.out.println(" 5.casting / trabalhando com caracteres ASC");
         System.out.println(" 6.Trabalhando com caracteres de conversão");
         System.out.println(" 7.calculo de conversao");
+        System.out.println(" 8.comparadores");
         System.out.print("Choose one:");
         choice = (char) System.in.read();
         
@@ -102,7 +103,7 @@ public class Introjava {
                 ch=90;        // give ch the value Z
                 System.out.println("ch is now " + ch);
                 break;
-
+7
             case '7':
                 double gallons;      // holds the number of gallons
                 double liters;       // holds conversion to liters
@@ -111,7 +112,34 @@ public class Introjava {
                 liters = gallons * 3.7854;     // convert to liters
                 
                 System.out.println("gallons is " + liters + " liters.");
+                break;
                 
+            case '8':
+                int j;
+                boolean b1, b2;
+                
+                i=10;
+                j=11;
+                if(i<j) System.out.println("i<j");
+                if(i<=j) System.out.println("i<=j");
+                if(i!=j) System.out.println("i!=j");
+                if(i==j) System.out.println("i==j");
+                if(i>=j) System.out.println("i>=j");
+                if(i>j) System.out.println("i>j");
+                
+                b1 = true;
+                b2 = false;
+                if(b1 & b2) System.out.println("this won't execute");  // and    
+                if(b1 & !b2) System.out.println("b1 e true e b2 nao é true");  // and    
+                if(!(b1 & b2)) System.out.println("b1 & b2) ambos nao são true (somente o b1)");
+                if(b1 | b2) System.out.println("b1 | b2 is true");    // |=ou
+                if(b1 ^ b2) System.out.println("b1 ^ b2 is true");    //  ^=   ou exclusivo
+                if(b1) System.out.println("b1 e true");
+                if(b2) System.out.println("b2 e true");
+                if(!b2) System.out.println("b2 e false");
+                break;
+                        
+                        
             default:
                 System.out.print("Selection not found.");
                         
@@ -123,7 +151,7 @@ public class Introjava {
         
         
         
-//                    AULA DE QUARTA-FEIRA        
+//                    AULA DE QUARTA-FEIRA (não apagar)       
 //       ======================================================
 //        aves objPassaro = new aves();
 //             String resultado = objPassaro.Comer("mais");
