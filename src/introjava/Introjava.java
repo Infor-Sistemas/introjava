@@ -5,6 +5,7 @@
  */
 package introjava;
 import java.util.Scanner;
+import java.lang.Math;
 
 /**
  *
@@ -12,9 +13,22 @@ import java.util.Scanner;
  */
 public class Introjava {
 
-    /**
-     * @param args the command line arguments
-     */
+     enum Tools {
+    SCREWDRIVER, WRENCH, HAMMER, PLIERS   // Constantes e enums em Caixa Alta
+    }
+    
+    public enum menu{
+    
+        SALVAR(1),IMPRIMIR(2),ABRIR(3),VISUALIZAR(4),FECHAR(5);
+        
+        private final int valor;
+        menu(int valorOpcao){
+            valor = valorOpcao;
+        }
+        public int getValor(){
+            return valor;
+        }
+    }
     
     public static void main(String[] args) throws java.io.IOException
     {  
@@ -29,6 +43,8 @@ public class Introjava {
         System.out.println(" 6.Trabalhando com caracteres de conversão");
         System.out.println(" 7.calculo de conversao");
         System.out.println(" 8.comparadores");
+        System.out.println(" 9. mais exemplos");
+        System.out.println(" 0. raiz quadrada");
         System.out.print("Choose one:");
         choice = (char) System.in.read();
         
@@ -134,19 +150,69 @@ public class Introjava {
                 if(!(b1 & b2)) System.out.println("b1 & b2) ambos nao são true (somente o b1)");
                 if(b1 | b2) System.out.println("b1 | b2 is true");    // |=ou
                 if(b1 ^ b2) System.out.println("b1 ^ b2 is true");    //  ^=   ou exclusivo
-                if(b1) System.out.println("b1 e true");
+                if(b1) System.out.println("b1 é true");
                 if(b2) System.out.println("b2 e true");
                 if(!b2) System.out.println("b2 e false");
                 break;
                         
-                        
+            case '9':
+                int a, c;
+                a=2;
+                b=3;
+                
+                if(a < b) System.out.println("a is less than b");
+                
+                // this won't display anything
+                if(a==b) System.out.println("you won't see this");
+                
+                System.out.println();
+
+                System.out.println("c contains -1");
+                if(c >= 0) System.out.println("c is non-negative");
+                if(c < 0) System.out.println("c is negative");
+                
+                System.out.println();
+                
+                c=b-a;    // c now contains 1
+                System.out.println("c contains 1");
+                if(c>=0) System.out.println("c is non-negative");
+                if(c<0) System.out.println("c is negative");
+
+                break;
+                
+            case '0':
+                double num, sroot, rerr;
+                for(num=1.0; num < 100.0; num++)
+                {
+                    sroot = Math.sqrt(num);      // raiz quadrada
+                    System.out.println("Square root of" + num + " is " + sroot);
+                    
+                    // compute rounding error SqrRoot
+                    rerr = num - (sroot * sroot);
+                    System.out.println("Rounding error is " + rerr);
+                    System.out.println();
+                    
+                }
+                
+                break;
             default:
-                System.out.print("Selection not found.");
-                        
+                System.out.print("Selection not found.");  
+                 escolhe(menu.ABRIR);
         }
         
     
     }
+    
+     public static void escolhe(menu Opcao){
+        if(Opcao == menu.SALVAR){
+            System.out.println("salvando");
+        }else if(Opcao == menu.ABRIR){
+            System.out.println("abrir arquivo ");
+        
+        }
+    
+    
+}
         
         
         
@@ -181,4 +247,3 @@ public class Introjava {
 
     
     
-}
